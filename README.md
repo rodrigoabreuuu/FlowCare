@@ -3,7 +3,7 @@
 ![GitHub dart badge](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![GitHub postgree sql badge](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
-<img src="assets/logo.png" alt="Logo FlowCare">
+<img src="assets/flowcare_transparente.png" alt="Logo FlowCare" width="150">
 
 > A FlowCare foi desenvolvida para auxiliar na gestão de vagas em creches, buscando facilitar a inscrição e otimizar a forma de determizar quem realmente precisa da vaga.
 
