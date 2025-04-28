@@ -31,24 +31,24 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#" title="https://www.linkedin.com/in/amanda-galv%C3%A3o-dos-santos-aa316a290/">
-        <img src="assets/perfil_Amanda.jpeg" width="100px;" alt="Foto da Amanda no Linkedin"/><br>
+      <a href="https://www.linkedin.com/in/amanda-galv%C3%A3o-dos-santos-aa316a290/" target="_blank" title="Perfil da Amanda no LinkedIn">
+        <img src="assets/perfil_Amanda.jpeg" width="100px;" alt="Foto da Amanda no LinkedIn"/><br>
         <sub>
           <b>Amanda Galvão</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="#" title="https://www.linkedin.com/in/lucasgalv%C3%A3o/">
-        <img src="assets/perfil_Lucas.jpeg" width="100px;" alt="Foto do Lucas no Linkedin"/><br>
+      <a href="https://www.linkedin.com/in/lucasgalv%C3%A3o/" target="_blank" title="Perfil do Lucas no LinkedIn">
+        <img src="assets/perfil_Lucas.jpeg" width="100px;" alt="Foto do Lucas no LinkedIn"/><br>
         <sub>
           <b>Lucas Galvão</b>
         </sub>
       </a>
     </td>
     <td align="center">
-      <a href="#" title="https://www.linkedin.com/in/rodrigoabreuuu/"">
-        <img src="assets/perfil_Rodrigo.jpeg" width="100px;" alt="Foto do Rodrigo no Linkedin"/><br>
+      <a href="https://www.linkedin.com/in/rodrigoabreuuu/" target="_blank" title="Perfil do Rodrigo no LinkedIn">
+        <img src="assets/perfil_Rodrigo.jpeg" width="100px;" alt="Foto do Rodrigo no LinkedIn"/><br>
         <sub>
           <b>Rodrigo Abreu</b>
         </sub>
