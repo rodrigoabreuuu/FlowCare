@@ -52,7 +52,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#" title="https://www.linkedin.com/in/rodrigoabreuuu/"">
-        <img src="link da imagem" width="100px;" alt="Foto do Rodrigo no Linkedin"/><br>
+        <img src="[link da imagem](https://github.com/rodrigoabreuuu/FlowCare/blob/main/assets/perfil_rodrigo.jpeg)" width="100px;" alt="Foto do Rodrigo no Linkedin"/><br>
         <sub>
           <b>Rodrigo Abreu</b>
         </sub>
