@@ -11,11 +11,14 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
-- [x] Criação do Banco de Dados no Supabase
-- [x] Conexão do Banco de Dados ao Flutterflow
-- [x] Criação das Páginas do Aplicativo
-- [ ] Desenvolvimento das Funcionalidades de cada página
-- [ ] Testes e Validação do registro das ações do APP no Banco de Dados
+- [✔️] Diagrama Entidade-Relacionamento ou ERD do Database
+- [✔️] Criação do Database no Supabase
+- [✔️] Conexão do Database ao Flutterflow
+- [✔️] Criação das Páginas do Aplicativo
+- [✔️] Autenticação do Login e Senha com o Database
+- [⏳] Configuração do CRUD
+- [⏳] Configuração o restante das páginas utilizando o CRUD
+- [⏳] Testes das Funções do Aplicativo
 
 ## ☕ Usando <FlowCare>
 
