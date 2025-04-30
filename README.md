@@ -11,7 +11,7 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
-- [✔️] Diagrama Entidade-Relacionamento ou ERD do Database
+- [✔️] Diagrama Entidade-Relacionamento do Database
 - [✔️] Criação do Database no Supabase
 - [✔️] Conexão do Database ao Flutterflow
 - [✔️] Criação das Páginas do Aplicativo
