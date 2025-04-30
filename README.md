@@ -5,7 +5,7 @@
 
 <img src="assets/flowcare_transparente.png" alt="Logo FlowCare" width="150">
 
-> A FlowCare foi desenvolvida para auxiliar na gestão de vagas em creches, buscando facilitar a inscrição e otimizar a forma de determizar quem realmente precisa da vaga.
+> A FlowCare é uma solução desenvolvida para automatizar e otimizar a gestão de vagas em creches públicas, integrando o processo de inscrição com critérios socioeconômicos para garantir a alocação eficiente e justa das vagas disponíveis.
 
 ### Ajustes e melhorias
 
@@ -22,6 +22,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ## ☕ Usando <FlowCare>
 
+### Frontend
+
+### Backend 
 
 
 ## 🤝 Colaboradores
