@@ -16,7 +16,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [✔️] Conexão do Database ao Flutterflow
 - [✔️] Criação das Páginas do Aplicativo
 - [✔️] Autenticação do Login e Senha com o Database
-- [⏳] Configuração do CRUD
+- [✔️] Configuração do CRUD
 - [⏳] Configuração o restante das páginas utilizando o CRUD
 - [⏳] Testes das Funções do Aplicativo
 
