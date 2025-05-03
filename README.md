@@ -45,6 +45,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ### Backend 
 
+![Image](https://github.com/user-attachments/assets/5e3b2e14-62f3-4a93-85e8-b54510736642)
 
 ## 🤝 Colaboradores
 
