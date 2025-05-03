@@ -21,15 +21,14 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 ## ☕ Usando <FlowCare>
 
 ### Frontend
-#### Caso já tenha cadastro, digite os dados e faça o login.
-![Image](https://github.com/user-attachments/assets/dc73b09b-557a-44b2-8ac0-4937a9dc354d)
-#### Se já tiver cadastro mas esqueceu a senha clique em "Esqueci minha senha" e siga os passos.
-![Image](https://github.com/user-attachments/assets/b426619c-30e0-4ea7-bc70-9d64ce52bf37)
-#### Caso não tenha cadastro, clique na aba CADASTRO e preencha os dados conforme o formulário.
-![Image](https://github.com/user-attachments/assets/680ea03c-c2b1-48a9-b78b-d010e6aa4ca4)
-#### Após efetuar o login você será redirecionado a Homepage onde encontrará diversas funções do aplicativo.
-![Image](https://github.com/user-attachments/assets/cecef615-1454-4cc9-aab7-ab8de71b8587)
 
+| Caso já tenha cadastro, digite os dados e faça o login. | Se já tiver cadastro mas esqueceu a senha clique em "Esqueci minha senha" e siga os passos. |
+|:--:|:--:|
+| ![Login](https://github.com/user-attachments/assets/dc73b09b-557a-44b2-8ac0-4937a9dc354d) | ![Esqueci a senha](https://github.com/user-attachments/assets/b426619c-30e0-4ea7-bc70-9d64ce52bf37) |
+
+| Caso não tenha cadastro, clique na aba CADASTRO e preencha os dados conforme o formulário. | Após efetuar o login você será redirecionado à Homepage onde encontrará diversas funções do aplicativo. |
+|:--:|:--:|
+| ![Cadastro](https://github.com/user-attachments/assets/680ea03c-c2b1-48a9-b78b-d010e6aa4ca4) | ![Homepage](https://github.com/user-attachments/assets/cecef615-1454-4cc9-aab7-ab8de71b8587) |
 
 ### Backend 
 
