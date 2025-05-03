@@ -22,13 +22,25 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ### Frontend
 
-| Caso já tenha cadastro, digite os dados e faça o login. | Se já tiver cadastro mas esqueceu a senha clique em "Esqueci minha senha" e siga os passos. |
+| 1 - Caso já tenha cadastro, digite os dados e faça o login. | 2 - Se já tiver cadastro mas esqueceu a senha clique em "Esqueci minha senha" e siga os passos. |
 |:--:|:--:|
-| ![Login](https://github.com/user-attachments/assets/dc73b09b-557a-44b2-8ac0-4937a9dc354d) | ![Esqueci a senha](https://github.com/user-attachments/assets/b426619c-30e0-4ea7-bc70-9d64ce52bf37) |
+| ![Login](https://github.com/user-attachments/assets/3e8249af-fd21-4554-bcd9-d3fed15565ce) | ![Esqueci a senha](https://github.com/user-attachments/assets/df7fb3f3-b878-4fe5-aa21-0778fb49bb6b) |
 
-| Caso não tenha cadastro, clique na aba CADASTRO e preencha os dados conforme o formulário. | Após efetuar o login você será redirecionado à Homepage onde encontrará diversas funções do aplicativo. |
+| 3 - Caso não tenha cadastro, clique na aba CADASTRO e preencha os dados conforme o formulário. | 4 - Após efetuar o login você será redirecionado à Homepage onde encontrará diversas funções do aplicativo. |
 |:--:|:--:|
-| ![Cadastro](https://github.com/user-attachments/assets/680ea03c-c2b1-48a9-b78b-d010e6aa4ca4) | ![Homepage](https://github.com/user-attachments/assets/cecef615-1454-4cc9-aab7-ab8de71b8587) |
+| ![Cadastro](https://github.com/user-attachments/assets/1ead01c9-fc05-45ec-9a51-44c785b0b0bf) | ![Homepage](https://github.com/user-attachments/assets/e2087c36-027b-4302-ab24-99e3d9c7cc0a) |
+
+| 5 - A primeira função recomendada a ser utilizada é cadastrar o aluno. | 6 - Após a conclusão do cadastro você pode buscar e cadastrar o aluno na vaga. |
+|:--:|:--:|
+| ![Cadastro do Aluno](https://github.com/user-attachments/assets/08108f75-6ec9-4dd8-8a13-7e1845220500) | ![Solicitar Vagas](https://github.com/user-attachments/assets/b088ce0b-c336-486e-b144-b3ee6925cea9) |
+
+| 7 -  Na aba minhas crianças você pode editar o cadastro dos alunos matriculados em sua responsabilidade. | 8 - ⏳ Na aba Status da Solicitação você pode acompanhar o andamento da matrícula. |
+|:--:|:--:|
+| ![Minhas Crianças](https://github.com/user-attachments/assets/3910ecfe-86f1-4b4e-9e13-6a2dbf01fd6b) | ![Status da Solicitação](https://github.com/user-attachments/assets/cecef615-1454-4cc9-aab7-ab8de71b8587) |
+
+| 9 - ⏳ Nesta aba será possível verificar o histórico escolar da criança, ou seja, movimentações como matrículas e transferências. | 10 - ⏳ Neste espaço, o responsável será notificado sobre o andamento de sua solicitação. |
+|:--:|:--:|
+| ![Histórico Escolar](https://github.com/user-attachments/assets/0a67ea86-19a7-4002-b78e-8d50dbc37600) | ![Avisos](https://github.com/user-attachments/assets/4ce7ae7d-7c12-47dc-b9e3-432b17b7d974) |
 
 ### Backend 
 
