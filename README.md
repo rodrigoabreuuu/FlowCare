@@ -1,9 +1,7 @@
-# FlowCare
+<img src="assets/FlowCare.png" alt="Logo FlowCare" width="150">
 
 ![GitHub dart badge](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![GitHub postgree sql badge](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-
-<img src="assets/flowcare_transparente.png" alt="Logo FlowCare" width="150">
 
 > A FlowCare é uma solução desenvolvida para automatizar e otimizar a gestão de vagas em creches públicas, integrando o processo de inscrição com critérios socioeconômicos para garantir a alocação eficiente e justa das vagas disponíveis.
 
