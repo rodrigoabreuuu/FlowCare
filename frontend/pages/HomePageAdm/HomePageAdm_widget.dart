@@ -212,7 +212,7 @@ class _HomePageAdmWidgetState extends State<HomePageAdmWidget> {
                                                   Colors.transparent,
                                               onTap: () async {
                                                 context.pushNamed(
-                                                    SolicitacaoAdmWidget
+                                                    SolicitacoesADMWidget
                                                         .routeName);
                                               },
                                               child: Icon(
@@ -225,7 +225,7 @@ class _HomePageAdmWidgetState extends State<HomePageAdmWidget> {
                                             ),
                                           ),
                                           Text(
-                                            'Solicitações',
+                                            'SolicitaÃ§Ãµes',
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -261,23 +261,12 @@ class _HomePageAdmWidgetState extends State<HomePageAdmWidget> {
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0, 0, 0, 15),
-                                            child: InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                context.pushNamed(
-                                                    AvisosAdmWidget.routeName);
-                                              },
-                                              child: FaIcon(
-                                                FontAwesomeIcons.solidBell,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .success,
-                                                size: 50,
-                                              ),
+                                            child: FaIcon(
+                                              FontAwesomeIcons.solidBell,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .success,
+                                              size: 50,
                                             ),
                                           ),
                                           Text(

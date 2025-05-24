@@ -148,7 +148,7 @@ class _AlunoWidgetState extends State<AlunoWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                                 child: Text(
-                                  'Cadastrar criança',
+                                  'Cadastrar crianÃ§a',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -200,7 +200,7 @@ class _AlunoWidgetState extends State<AlunoWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
                                 child: Text(
-                                  'Minhas crianças',
+                                  'Minhas crianÃ§as',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium

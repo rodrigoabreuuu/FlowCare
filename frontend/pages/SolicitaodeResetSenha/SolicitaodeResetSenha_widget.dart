@@ -352,7 +352,7 @@ class _SolicitaodeResetSenhaWidgetState
 
                           context.pushNamed(LoginWidget.routeName);
                         },
-                        text: 'Enviar link de redefinição',
+                        text: 'Enviar link de redefiniÃ§Ã£o',
                         options: FFButtonOptions(
                           width: 250,
                           height: 40,

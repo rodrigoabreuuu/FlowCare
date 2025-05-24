@@ -35,6 +35,12 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
     super.initState();
     _model = createModel(context, () => SolicitarVagaModel());
 
+    _model.idAlunoTextController ??= TextEditingController();
+    _model.idAlunoFocusNode ??= FocusNode();
+
+    _model.idCrecheTextController ??= TextEditingController();
+    _model.idCrecheFocusNode ??= FocusNode();
+
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -54,7 +60,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFFBF9F5),
+        backgroundColor: Colors.white,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
@@ -143,8 +149,19 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                               FormFieldController<String>(null),
                           options:
                               alunovagaAlunoRowList.map((e) => e.nome).toList(),
-                          onChanged: (val) =>
-                              safeSetState(() => _model.alunovagaValue = val),
+                          onChanged: (val) async {
+                            safeSetState(() => _model.alunovagaValue = val);
+                            safeSetState(() {
+                              _model.idAlunoTextController?.text =
+                                  alunovagaAlunoRowList
+                                      .where((e) =>
+                                          e.nome == _model.alunovagaValue)
+                                      .toList()
+                                      .firstOrNull!
+                                      .idMatriculaAluno
+                                      .toString();
+                            });
+                          },
                           width: double.infinity,
                           height: 40,
                           textStyle: FlutterFlowTheme.of(context)
@@ -164,7 +181,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                          hintText: 'Selecione a criança para vaga',
+                          hintText: 'Selecione a crianÃ§a para vaga',
                           icon: Icon(
                             Icons.keyboard_arrow_down_rounded,
                             color: FlutterFlowTheme.of(context).secondaryText,
@@ -190,7 +207,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                     child: FlutterFlowDropDown<String>(
                       controller: _model.periodoValueController ??=
                           FormFieldController<String>(null),
-                      options: ['Manhã', 'Tarde', 'Integral'],
+                      options: ['ManhÃ£', 'Tarde', 'Integral'],
                       onChanged: (val) =>
                           safeSetState(() => _model.periodoValue = val),
                       width: double.infinity,
@@ -211,7 +228,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                      hintText: 'Selecione o período desejado',
+                      hintText: 'Selecione o perÃ­odo desejado',
                       icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -235,7 +252,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                     child: FlutterFlowDropDown<String>(
                       controller: _model.resptrabValueController ??=
                           FormFieldController<String>(null),
-                      options: ['Sim', 'Não'],
+                      options: ['Sim', 'NÃ£o'],
                       onChanged: (val) =>
                           safeSetState(() => _model.resptrabValue = val),
                       width: double.infinity,
@@ -256,7 +273,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                      hintText: 'Você trabalha?',
+                      hintText: 'VocÃª trabalha?',
                       icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -280,7 +297,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                     child: FlutterFlowDropDown<String>(
                       controller: _model.respRedeApoioValueController ??=
                           FormFieldController<String>(null),
-                      options: ['Sim', 'Não'],
+                      options: ['Sim', 'NÃ£o'],
                       onChanged: (val) =>
                           safeSetState(() => _model.respRedeApoioValue = val),
                       width: double.infinity,
@@ -301,7 +318,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                      hintText: 'Você possui rede de apoio?',
+                      hintText: 'VocÃª possui rede de apoio?',
                       icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -325,7 +342,7 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                     child: FlutterFlowDropDown<String>(
                       controller: _model.respGovValueController ??=
                           FormFieldController<String>(null),
-                      options: ['Sim', 'Não'],
+                      options: ['Sim', 'NÃ£o'],
                       onChanged: (val) =>
                           safeSetState(() => _model.respGovValue = val),
                       width: double.infinity,
@@ -367,54 +384,339 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                   ),
                   Padding(
                     padding: EdgeInsets.all(12),
-                    child: FlutterFlowDropDown<String>(
-                      controller: _model.crecheValueController ??=
-                          FormFieldController<String>(null),
-                      options: <String>[],
-                      onChanged: (val) =>
-                          safeSetState(() => _model.crecheValue = val),
-                      width: double.infinity,
-                      height: 40,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .bodyMedium
-                          .override(
-                            font: GoogleFonts.inter(
-                              fontWeight: FontWeight.w500,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            letterSpacing: 0.0,
-                            fontWeight: FontWeight.w500,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
-                          ),
-                      hintText: 'Selecione a creche desejada',
-                      icon: Icon(
-                        Icons.keyboard_arrow_down_rounded,
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                        size: 24,
+                    child: FutureBuilder<List<CrecheRow>>(
+                      future: CrecheTable().queryRows(
+                        queryFn: (q) => q,
                       ),
-                      fillColor:
-                          FlutterFlowTheme.of(context).secondaryBackground,
-                      elevation: 2,
-                      borderColor: Color(0xFF06D5CD),
-                      borderWidth: 0,
-                      borderRadius: 8,
-                      margin: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
-                      hidesUnderline: true,
-                      isOverButton: false,
-                      isSearchable: false,
-                      isMultiSelect: false,
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50,
+                              height: 50,
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  FlutterFlowTheme.of(context).primary,
+                                ),
+                              ),
+                            ),
+                          );
+                        }
+                        List<CrecheRow> crecheCrecheRowList = snapshot.data!;
+
+                        return FlutterFlowDropDown<String>(
+                          controller: _model.crecheValueController ??=
+                              FormFieldController<String>(null),
+                          options:
+                              crecheCrecheRowList.map((e) => e.nome).toList(),
+                          onChanged: (val) async {
+                            safeSetState(() => _model.crecheValue = val);
+                            safeSetState(() {
+                              _model.idCrecheTextController?.text =
+                                  crecheCrecheRowList
+                                      .where(
+                                          (e) => e.nome == _model.crecheValue)
+                                      .toList()
+                                      .firstOrNull!
+                                      .idCreche
+                                      .toString();
+                            });
+                          },
+                          width: double.infinity,
+                          height: 40,
+                          textStyle: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.inter(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
+                          hintText: 'Selecione a creche',
+                          icon: Icon(
+                            Icons.keyboard_arrow_down_rounded,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 24,
+                          ),
+                          fillColor:
+                              FlutterFlowTheme.of(context).secondaryBackground,
+                          elevation: 2,
+                          borderColor: Color(0xFF06D5CD),
+                          borderWidth: 0,
+                          borderRadius: 8,
+                          margin: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                          hidesUnderline: true,
+                          isOverButton: false,
+                          isSearchable: false,
+                          isMultiSelect: false,
+                        );
+                      },
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsets.all(12),
+                      child: Container(
+                        width: double.infinity,
+                        child: TextFormField(
+                          controller: _model.idAlunoTextController,
+                          focusNode: _model.idAlunoFocusNode,
+                          autofocus: false,
+                          readOnly: true,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            isDense: false,
+                            labelStyle: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
+                            hintStyle: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFF06D5CD),
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            errorBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context).error,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            focusedErrorBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context).error,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            filled: true,
+                            fillColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    font: GoogleFonts.inter(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                                    letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                          cursorColor: FlutterFlowTheme.of(context).primaryText,
+                          validator: _model.idAlunoTextControllerValidator
+                              .asValidator(context),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(-1, 0),
+                    child: Padding(
+                      padding: EdgeInsets.all(12),
+                      child: Container(
+                        width: double.infinity,
+                        child: TextFormField(
+                          controller: _model.idCrecheTextController,
+                          focusNode: _model.idCrecheFocusNode,
+                          autofocus: false,
+                          readOnly: true,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            isDense: false,
+                            labelStyle: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
+                            hintStyle: FlutterFlowTheme.of(context)
+                                .labelMedium
+                                .override(
+                                  font: GoogleFonts.inter(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFF06D5CD),
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0x00000000),
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            errorBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context).error,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            focusedErrorBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context).error,
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            filled: true,
+                            fillColor: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    font: GoogleFonts.inter(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                                    letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                          cursorColor: FlutterFlowTheme.of(context).primaryText,
+                          validator: _model.idCrecheTextControllerValidator
+                              .asValidator(context),
+                        ),
+                      ),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('BntCadastrarAluno pressed ...');
+                      onPressed: () async {
+                        await SolicitacaoTable().insert({
+                          'periodo_preferencial': _model.periodoValue,
+                          'responsavel_trabalha': _model.resptrabValue,
+                          'rede_apoio': _model.respRedeApoioValue,
+                          'programa_gov': _model.respGovValue,
+                          'aluno': _model.alunovagaValue,
+                          'status': 'Pendente',
+                          'id_resp': currentUserUid,
+                          'id_creche':
+                              int.tryParse(_model.idCrecheTextController.text),
+                          'id_aluno':
+                              int.tryParse(_model.idAlunoTextController.text),
+                        });
+                        await showDialog(
+                          context: context,
+                          builder: (alertDialogContext) {
+                            return AlertDialog(
+                              title: Text('SolicitaÃ§Ã£o realizada!'),
+                              content: Text(
+                                  'Acompanhe o status em minhas solicitaÃ§Ãµes.'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () =>
+                                      Navigator.pop(alertDialogContext),
+                                  child: Text('Ok'),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+
+                        context.pushNamed(HomePageWidget.routeName);
                       },
                       text: 'Confirmar',
                       options: FFButtonOptions(
@@ -455,8 +757,8 @@ class _SolicitarVagaWidgetState extends State<SolicitarVagaWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('BntCadastrarAluno pressed ...');
+                      onPressed: () async {
+                        context.pushNamed(HomePageWidget.routeName);
                       },
                       text: 'Cancelar',
                       options: FFButtonOptions(

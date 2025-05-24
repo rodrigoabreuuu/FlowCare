@@ -722,6 +722,47 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       ),
                                             ),
                                           ),
+                                          InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed(
+                                                  HomePageAdmWidget.routeName);
+                                            },
+                                            child: Text(
+                                              'Acesso Administrador',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        font: GoogleFonts.inter(
+                                                          fontWeight:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontWeight,
+                                                          fontStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .fontStyle,
+                                                        ),
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontWeight,
+                                                        fontStyle:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .fontStyle,
+                                                      ),
+                                            ),
+                                          ),
                                         ].divide(SizedBox(height: 15)),
                                       ),
                                     ),
@@ -1586,7 +1627,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                     .showSnackBar(
                                                   SnackBar(
                                                     content: Text(
-                                                      'Usuário cadastrado!',
+                                                      'UsuÃ¡rio cadastrado!',
                                                       style:
                                                           GoogleFonts.openSans(
                                                         color: FlutterFlowTheme

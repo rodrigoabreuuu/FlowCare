@@ -34,10 +34,24 @@ class SolicitarVagaModel extends FlutterFlowModel<SolicitarVagaWidget> {
   // State field(s) for Creche widget.
   String? crecheValue;
   FormFieldController<String>? crecheValueController;
+  // State field(s) for idAluno widget.
+  FocusNode? idAlunoFocusNode;
+  TextEditingController? idAlunoTextController;
+  String? Function(BuildContext, String?)? idAlunoTextControllerValidator;
+  // State field(s) for idCreche widget.
+  FocusNode? idCrecheFocusNode;
+  TextEditingController? idCrecheTextController;
+  String? Function(BuildContext, String?)? idCrecheTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {}
+  void dispose() {
+    idAlunoFocusNode?.dispose();
+    idAlunoTextController?.dispose();
+
+    idCrecheFocusNode?.dispose();
+    idCrecheTextController?.dispose();
+  }
 }

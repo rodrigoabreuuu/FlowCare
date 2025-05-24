@@ -510,7 +510,7 @@ class _CadastrarCriancaWidgetState extends State<CadastrarCriancaWidget> {
                         'Preto',
                         'Pardo',
                         'Branco',
-                        'Indígena',
+                        'IndÃ­gena',
                         'Amarelo'
                       ],
                       onChanged: (val) =>
@@ -533,7 +533,7 @@ class _CadastrarCriancaWidgetState extends State<CadastrarCriancaWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                      hintText: 'Raça',
+                      hintText: 'RaÃ§a',
                       icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -557,7 +557,7 @@ class _CadastrarCriancaWidgetState extends State<CadastrarCriancaWidget> {
                     child: FlutterFlowDropDown<String>(
                       controller: _model.deficienciaAlunoValueController ??=
                           FormFieldController<String>(null),
-                      options: ['Sim', 'Não'],
+                      options: ['Sim', 'NÃ£o'],
                       onChanged: (val) => safeSetState(
                           () => _model.deficienciaAlunoValue = val),
                       width: double.infinity,
@@ -578,7 +578,7 @@ class _CadastrarCriancaWidgetState extends State<CadastrarCriancaWidget> {
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                      hintText: 'Possui deficiência?',
+                      hintText: 'Possui deficiÃªncia?',
                       icon: Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: FlutterFlowTheme.of(context).secondaryText,
@@ -607,11 +607,11 @@ class _CadastrarCriancaWidgetState extends State<CadastrarCriancaWidget> {
                           controller: _model.tDeficienciaTextController,
                           focusNode: _model.tDeficienciaFocusNode,
                           autofocus: false,
-                          readOnly: _model.deficienciaAlunoValue == 'Não',
+                          readOnly: _model.deficienciaAlunoValue == 'NÃ£o',
                           obscureText: false,
                           decoration: InputDecoration(
                             isDense: false,
-                            labelText: 'Descrição da deficiência',
+                            labelText: 'DescriÃ§Ã£o da deficiÃªncia',
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -725,7 +725,7 @@ class _CadastrarCriancaWidgetState extends State<CadastrarCriancaWidget> {
                         context: context,
                         builder: (alertDialogContext) {
                           return AlertDialog(
-                            title: Text('Informação'),
+                            title: Text('InformaÃ§Ã£o'),
                             content: Text('Cadastro realizado com sucesso!'),
                             actions: [
                               TextButton(

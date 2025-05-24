@@ -128,7 +128,7 @@ class _EditarDadosResponsavelWidgetState
             },
           ),
           title: Text(
-            'Dados do Responsável',
+            'Dados do ResponsÃ¡vel',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   font: GoogleFonts.readexPro(
                     fontWeight: FontWeight.w500,
@@ -727,8 +727,8 @@ class _EditarDadosResponsavelWidgetState
                             widget!.atualizarCadResp?.estadoCivil,
                       ),
                       options: List<String>.from(
-                          ['Casado(a)', 'Solteiro(a)', 'Viúvo(a)']),
-                      optionLabels: ['Casado(a)', 'Solteiro(a)', 'Viúvo(a)'],
+                          ['Casado(a)', 'Solteiro(a)', 'ViÃºvo(a)']),
+                      optionLabels: ['Casado(a)', 'Solteiro(a)', 'ViÃºvo(a)'],
                       onChanged: (val) =>
                           safeSetState(() => _model.estadoCivilRespValue = val),
                       width: double.infinity,
@@ -1045,7 +1045,7 @@ class _EditarDadosResponsavelWidgetState
                           obscureText: false,
                           decoration: InputDecoration(
                             isDense: false,
-                            labelText: 'Nº',
+                            labelText: 'NÂº',
                             labelStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -1606,7 +1606,7 @@ class _EditarDadosResponsavelWidgetState
                         context: context,
                         builder: (alertDialogContext) {
                           return AlertDialog(
-                            title: Text('Informação'),
+                            title: Text('InformaÃ§Ã£o'),
                             content: Text('Dados alterados com sucesso!'),
                             actions: [
                               TextButton(

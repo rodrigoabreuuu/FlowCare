@@ -1,3 +1,4 @@
+import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -70,7 +71,7 @@ class _MinhasCriancasWidgetState extends State<MinhasCriancasWidget> {
             },
           ),
           title: Text(
-            'Minhas Crianças',
+            'Minhas CrianÃ§as',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   font: GoogleFonts.readexPro(
                     fontWeight: FontWeight.w500,
@@ -160,7 +161,10 @@ class _MinhasCriancasWidgetState extends State<MinhasCriancasWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                       child: FutureBuilder<List<AlunoRow>>(
                         future: AlunoTable().queryRows(
-                          queryFn: (q) => q,
+                          queryFn: (q) => q.eqOrNull(
+                            'id_resp',
+                            currentUserUid,
+                          ),
                         ),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.

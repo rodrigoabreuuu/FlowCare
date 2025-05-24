@@ -75,7 +75,7 @@ class _DadosResponsavelVisualWidgetState
             },
           ),
           title: Text(
-            'Dados do Responsável',
+            'Dados do ResponsÃ¡vel',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   font: GoogleFonts.readexPro(
                     fontWeight: FontWeight.w500,
