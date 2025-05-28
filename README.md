@@ -7,7 +7,7 @@
 
 ### Ajustes e melhorias
 
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
+O protótipo inicial do projeto foi desenvolvido e concluímos as seguintes funções:
 
 - [✔️] Diagrama Entidade-Relacionamento do Database
 - [✔️] Criação do Database no Supabase
@@ -19,6 +19,13 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [✔️] Testes das Funções do Aplicativo
 
 ## ☕ Usando <FlowCare>
+
+### Aplicativo
+
+🔗 [Video Funcional do Aplicativo](https://www.loom.com/share/0413346e5e4e48be9c07bc8a8700c9bb?sid=574f9482-5b9e-49dd-be6a-bfb3c5e13c04)
+
+Como nossos aplicativos de desenvolvimento são "Free Trial" e ainda não investimos na versão premium, não foi possível disponibilizar ele para download, mas ele pode ser testado através deste [Link](https://flowcare-6akzt6.flutterflow.app/).
+
 
 ### Frontend
 
