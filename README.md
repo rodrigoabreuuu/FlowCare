@@ -7,16 +7,21 @@
 
 ### Ajustes e melhorias
 
-O protótipo inicial do projeto foi desenvolvido e concluímos as seguintes funções:
+Funcionalidades Desenvolvidas:
 
-- [✔️] Diagrama Entidade-Relacionamento do Database
-- [✔️] Criação do Database no Supabase
-- [✔️] Conexão do Database ao Flutterflow
-- [✔️] Criação das Páginas do Aplicativo
-- [✔️] Autenticação do Login e Senha com o Database
-- [✔️] Configuração do CRUD
-- [✔️] Configuração o restante das páginas utilizando o CRUD
-- [✔️] Testes das Funções do Aplicativo
+[✔️] Modelagem do banco de dados com Diagrama Entidade-Relacionamento (DER)
+[✔️] Criação do banco de dados na plataforma Supabase
+[✔️] Integração do banco de dados com o Flutterflow
+[✔️] Desenvolvimento das páginas do aplicativo
+[✔️] Implementação da autenticação de login e senha
+[✔️] Configuração completa das operações CRUD
+[✔️] Integração do CRUD com as demais páginas do aplicativo
+[✔️] Testes funcionais das principais operações do sistema
+
+Melhorias Planejadas:
+
+[🔄] Otimização de desempenho em todas as páginas
+[🔄] Implementação de versão Web do aplicativo para administradores
 
 ## ☕ Usando <FlowCare>
 
