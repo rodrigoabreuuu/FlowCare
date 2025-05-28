@@ -20,7 +20,7 @@ Funcionalidades Desenvolvidas:
 
 Melhorias Planejadas:
 
-- [🔄] Otimização de desempenho em todas as páginas
+- [🔄] Adição de funções e informações em todas as páginas
 - [🔄] Implementação de versão Web do aplicativo para administradores
 
 ## ☕ Usando <FlowCare>
