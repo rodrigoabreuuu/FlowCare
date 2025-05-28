@@ -22,26 +22,29 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ### Frontend
 
-| 1 - Caso já tenha cadastro, <br>digite os dados e <br>faça o login. <br><br> | 2 - Se já tiver cadastro, <br>mas esqueceu a senha, <br>clique em "Esqueci minha senha" <br>e siga os passos. <br> |
+| 1 - Caso já tenha cadastro, <br>digite os dados e <br>faça o login. <br><br> | 2 - Caso não tenha cadastro, <br>clique na aba "Cadastro" <br>e preencha os dados <br>conforme solicitado. <br> |
 |:--:|:--:|
-| <img src="https://github.com/user-attachments/assets/3e8249af-fd21-4554-bcd9-d3fed15565ce" width="300"/> | <img src="https://github.com/user-attachments/assets/df7fb3f3-b878-4fe5-aa21-0778fb49bb6b" width="300"/> |
+| <img src="assets/01- Login.jpeg" width="300"/> | <img src="assets/02- Criar conta.jpeg" width="300"/> |
 
-| 3 - Caso não tenha cadastro, <br>clique na aba CADASTRO <br>e preencha os dados <br>conforme solicitado. <br> | 4 - Após o login, você será <br>redirecionado à Homepage <br>com várias funcionalidades <br>do aplicativo. <br> |
+| 3 - Após o login, você será <br>redirecionado à "Homepage" <br>com várias funcionalidades <br>do aplicativo. <br> | 4 - A primeira função <br>recomendada é o <br>cadastro do aluno. <br><br> |
 |:--:|:--:|
-| <img src="https://github.com/user-attachments/assets/1ead01c9-fc05-45ec-9a51-44c785b0b0bf" width="300"/> | <img src="https://github.com/user-attachments/assets/e2087c36-027b-4302-ab24-99e3d9c7cc0a" width="300"/> |
+| <img src="assets/03- Homepage do responsável.jpeg" width="300"/> | <img src="assets/04- Editar dados da criança.jpeg" width="300"/> |
 
-| 5 - A primeira função <br>recomendada é o <br>cadastro do aluno. <br><br> | 6 - Após o cadastro, <br>busque o aluno e <br>solicite a vaga <br>disponível. <br> |
+| 5 - Na página "Minhas Crianças"<br> você pode visualizar<br> e atualizar os dados da criança. <br><br> | 6 - Na página "Dados<br> do Responsável" você deve <brpreencher suas informações. <br> |
 |:--:|:--:|
-| <img src="https://github.com/user-attachments/assets/08108f75-6ec9-4dd8-8a13-7e1845220500" width="300"/> | <img src="https://github.com/user-attachments/assets/b088ce0b-c336-486e-b144-b3ee6925cea9" width="300"/> |
+| <img src="assets/05- Crianças cadastradas.jpeg" width="300"/> | <img src="assets/06 - Editar dados do responsável.jpeg" width="300"/> |
 
-| 7 - Em "Minhas Crianças", <br>você pode editar os <br>cadastros de alunos <br>sob sua responsabilidade. <br> | 8 - ⏳ Acompanhe o andamento <br>da matrícula acessando <br>“Status da Solicitação”. <br><br> |
+| 7 - Para solicitar uma vaga<br> entre na página "Solicitar<br> Vaga" e preencha as informações | 8 - Para acompanhar o andamento <br>da solicitação acesse <br>“Minhas Solicitações”. <br><br> |
 |:--:|:--:|
-| <img src="https://github.com/user-attachments/assets/3910ecfe-86f1-4b4e-9e13-6a2dbf01fd6b" width="300"/> | <img src="https://github.com/user-attachments/assets/2c9ec27e-079c-4a0e-9cd8-e374a52f268c" width="300"/> |
+| <img src="assets/08 - Solicitar vaga.jpeg" width="300"/> | <img src="assets/07 - Solicitações do responsável.jpeg" width="300"/> |
 
-| 9 - ⏳ Veja o histórico <br>escolar da criança com <br>movimentações como <br>matrículas e transferências. <br> | 10 - ⏳ Receba notificações <br>sobre o andamento da <br>solicitação de matrícula <br>pelo sistema. <br> |
+| 9 -  Essa será a tela de<br> "HomePage" na visão do<br> administrador.<br><br> | 10 -  Ele fará a gestão das solicitações através da página "Solicitações Pendentes" |
 |:--:|:--:|
-| <img src="https://github.com/user-attachments/assets/0a67ea86-19a7-4002-b78e-8d50dbc37600" width="300"/> | <img src="https://github.com/user-attachments/assets/4ce7ae7d-7c12-47dc-b9e3-432b17b7d974" width="300"/> |
+| <img src="assets/09 - Homepage do gestor.jpeg" width="300"/> | <img src="assets/10 - Solicitações para aprovação do gestor.jpeg" width="300"/> |
 
+| 11 - Ele poderá avaliar a solicitação conforme novas informações que serão adicionadas nesta página. <br> | 12 - A página avisos terá como função enviar notificações aos responsáveis sobre as crianças. <br> |
+|:--:|:--:|
+| <img src="assets/11 - Aprovar solicitação.jpeg" width="300"/> | <img src="assets/12 - Avisos.png" width="300"/> |
 
 ### Backend 
 
